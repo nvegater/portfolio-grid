@@ -9,13 +9,15 @@ const Home = () => {
         <meta name="description" content="Portfolio of Nicolas Vega Terrazas" />
       </Head>
 
-      <main>
-        <div className={styles.square}>one</div>
-        <div className={styles.large}>two</div>
-        <div className={styles.square}>three</div>
-        <div className={styles.smallsquare}>four</div>
-        <div className={styles.tall}>five</div>
-        <div className={styles.wide}>six</div>
+      <main className={styles.main}>
+        <div className={styles.portfolio}>
+          <div className={styles.square}>one</div>
+          <div className={styles.large}>two</div>
+          <div className={styles.square}>three</div>
+          <div className={styles.smallsquare}>four</div>
+          <div className={styles.tall}>five</div>
+          <div className={styles.wide}>six</div>
+        </div>
       </main>
     </div>
   );

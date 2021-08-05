@@ -1,9 +1,21 @@
+.main {
+  padding: 10%;
+  flex: 1 1 80%;
+  min-height: 100vh;
+  background-color: azure;
+}
+
+.portfolio {
+  composes: main;
+  display: grid;
+  height: 100%;
+  background-color: beige;
+}
+
 .portfolio-item {
-  background: red;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: yellow;
 }
 
 .square {
