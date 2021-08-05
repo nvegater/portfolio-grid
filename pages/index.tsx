@@ -10,6 +10,9 @@ const Home = () => {
       </Head>
 
       <main className={styles.main}>
+        <h1 className={styles.title}>
+          CSS Stuffffffffffffffffffffffffffffffff
+        </h1>
         <div className={styles.portfolio}>
           <div className={styles.square}>one</div>
           <div className={styles.large}>two</div>
