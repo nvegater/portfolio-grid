@@ -1,11 +1,11 @@
 .main {
   padding: 10%;
   min-height: 100vh;
-  background-color: #587be7;
+  background-color: #070b17;
 }
 
 .title {
-  background-image: linear-gradient(45deg, black, red);
+  background-image: linear-gradient(45deg, #8b7979, red);
   /*background-clip: text is invalid*/
   -webkit-background-clip: text;
   color: transparent;
@@ -16,11 +16,11 @@
   /* Occupy all the space vertically from main (parent)*/
   display: grid;
   height: 100%;
-  /* */
-  grid-gap: 20px;
+  /* 1fr -> Fraccion: fill up available space.
+     100px -> they will all be squares */
   grid-template-rows: [row1] 1fr [row1-end row2] 1fr [row2-end row3] 1fr [row3-end row4] 1fr [row4-end row5] 1fr [row5-end row6] 1fr [row6-end];
-  /* 1fr -> Fraccion: fill up available space. If I put e.g. 100px they will all be squares*/
   grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
 }
 
 .portfolio-item {
@@ -28,26 +28,70 @@
   justify-content: center;
   align-items: center;
   background-color: #de8124;
+  font-size: 1.5em;
 }
 
 .square {
   composes: portfolio-item;
   grid-row: span 2;
   grid-column: span 2;
+  /*  grid-column: 3 / span 2
+                  Starts from column 3 and spans 2 columns
+   */
 }
 
 .large {
   composes: portfolio-item;
+  grid-row: span 3;
+  grid-column: span 3;
 }
 
 .smallsquare {
   composes: portfolio-item;
+  grid-row: span 1;
+  grid-column: span 1;
 }
 
 .tall {
   composes: portfolio-item;
+  grid-row: span 3;
+  grid-column: span 2;
 }
 
 .wide {
   composes: portfolio-item;
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.bgimg {
+  color: dimgrey;
+  background-size: cover;
+  background-position: top left;
+  transition: all ease-in-out 300ms;
+  position: relative;
+  z-index: 10;
+}
+
+.bgimg:before {
+  content: "";
+  display: block;
+  background-color: #de8124;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: all ease-in-out 300ms;
+  z-index: -1;
+}
+
+.bgimg:hover:before {
+  opacity: 0.2;
+}
+
+.sqrbgimg {
+  composes: bgimg;
+  background-image: url("//unsplash.it/800/600");
 }

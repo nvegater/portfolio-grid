@@ -14,7 +14,7 @@ const Home = () => {
           CSS Stuffffffffffffffffffffffffffffffff
         </h1>
         <div className={styles.portfolio}>
-          <div className={styles.square}>one</div>
+          <div className={`${styles.square} ${styles.sqrbgimg}`}>one</div>
           <div className={styles.large}>two</div>
           <div className={styles.square}>three</div>
           <div className={styles.smallsquare}>four</div>
